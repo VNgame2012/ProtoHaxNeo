@@ -1,12 +1,18 @@
-
-
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
 dependencyResolutionManagement {
-		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-		repositories {
-			mavenCentral()
-			maven { url 'https://jitpack.io' }
-		}
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenLocal()
+        maven { url = 'https://mccheatz.github.io/maven_repo/' }
+        google()
+        mavenCentral()
+    }
 }
-dependencies {
-	        implementation 'com.github.VNgame2012:ProtoHaxNeo:Tag'
-}
+rootProject.name = 'ProtoHax-Android'
+include ':app'
