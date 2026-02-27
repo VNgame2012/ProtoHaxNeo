@@ -13,7 +13,6 @@ repositories {
     maven { url = 'https://repo.opencollab.dev/maven-releases/' }
     maven { url = 'https://repo.opencollab.dev/maven-snapshots/' }
     maven { url = 'https://mccheatz.github.io/maven_repo/' }
-    maven { url = 'https://jitpack.io' }
 }
 
 configurations {
@@ -55,3 +54,13 @@ publishing {
         }
     }
 }
+
+
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.opencollab.dev/maven-releases/' }
+    // ... other repos ...
+    maven { url 'https://jitpack.io' } // Keep this at the end
+}
+
