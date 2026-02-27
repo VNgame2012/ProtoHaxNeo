@@ -64,14 +64,13 @@ repositories {
     maven { url 'https://jitpack.io' } // Keep this at the end
 }
 
-repositories {
-    mavenCentral()
-    maven {
-        url = 'https://jitpack.io'
-        credentials {
-            // These names must match the 'repoUsername' part of the env var above
-            username = repoUsername 
-            password = repoPassword
-        }
-    }
+dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+}
+dependencies {
+	        implementation 'com.github.VNgame2012:ProtoHaxNeo:Tag'
 }
