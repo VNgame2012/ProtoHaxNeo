@@ -26,3 +26,11 @@ android {
         targetSdkVersion 34
     }
 }
+
+android {
+    sourceSets {
+        main {
+            manifest.srcFile './app/src/main/AndroidManifest.xml' // Or your custom path
+        }
+    }
+}
