@@ -17,3 +17,12 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.8.21' apply false
 }
                                         
+android {
+    // Defines the API level to compile against
+    compileSdk 34 // Or compileSdkVersion 34 for older syntax
+    
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 34
+    }
+}
