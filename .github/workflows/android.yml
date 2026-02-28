@@ -26,7 +26,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-      env:
-        # This maps your GitHub Secret to an environment variable Gradle can see
-        ORG_GRADLE_PROJECT_repoPassword: ${{ secrets.REPO_PASSWORD }}
-        ORG_GRADLE_PROJECT_repoUsername: ${{ secrets.REPO_USERNAME }}
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v4
+      with:
+       name: my-artifact-name # The name of the artifact
+       path: ./build # The file or directory
